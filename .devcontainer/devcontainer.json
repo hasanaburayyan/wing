@@ -11,6 +11,16 @@
     "ghcr.io/devcontainers/features/rust:1": {},
     "devwasm.azurecr.io/dev-wasm/dev-wasm-feature/rust-wasi:0": {}
   },
+  "postStartCommand": "npm install",
+  "customizations": {
+    "vscode": {
+      "settings": {},
+      "extensions": [
+        "monada.vscode-wing",
+        "rust-lang.rust-analyzer"
+      ]
+    }
+  },
   "mounts": [
     "source=${localEnv:HOME}/.ssh,target=/home/vscode/.ssh,type=bind"
   ]
